@@ -1,0 +1,4007 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1306</width>
+    <height>650</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:white;
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_30">
+    <item>
+     <widget class="QWidget" name="full_menu_widget" native="true">
+      <property name="styleSheet">
+       <string notr="true">
+/*= Style for mainwindow START
+  ==================================================== */
+	#MainWindow {
+		background-color: #fff;
+	}
+/*= END
+  ==================================================== */
+
+/*= Style for button to change menu style START
+  ==================================================== */
+	#change_btn {
+		padding: 5px;
+		border: none;
+		width: 30px;
+		height: 30px;
+	}
+/*= END
+  ==================================================== */
+
+/*= Style for header widget START
+  ==================================================== */
+	#widget {
+		background-color: #f9fafd;
+	}
+/*= END
+  ==================================================== */
+
+/*= Style for menu with icon only START
+  ==================================================== */
+  	/* style for widget */
+	#icon_only_widget {
+		background-color: #313a46;
+		width:50px;
+	}
+
+    /* style for QPushButton and QLabel */
+	#icon_only_widget QPushButton, QLabel {
+		height:50px;
+		border:none;
+		/* border-bottom: 1px solid #b0b0b0; */
+	}
+
+	#icon_only_widget QPushButton:hover {
+		background-color: rgba( 86, 101, 115, 0.5);
+	}
+
+	/* style for logo image */
+	#logo_label_1 {
+		padding: 5px
+	}
+/*= END
+  ==================================================== */
+
+/*= Style for menu with icon and text START
+  ==================================================== */
+	/* style for widget */
+	#full_menu_widget {
+		background-color: #313a46;
+	}
+
+	/* style for QPushButton */
+	#full_menu_widget QPushButton {
+		border:none;
+		border-radius: 3px;
+		text-align: left;
+		padding: 8px 0 8px 15px;
+		color: #788596;
+		background-color: #313a46;
+ 		font-weight: bold;
+         font-size: 14px;
+	}
+
+	#full_menu_widget QPushButton:hover {
+		background-color: rgba( 86, 101, 115, 0.5);
+	}
+
+	#full_menu_widget QPushButton:checked {
+		color: #fff;
+	}
+
+	/* style for logo image */
+	#logo_label_2 {
+		padding: 5px;
+		color: #fff;
+	}
+
+	/* style for APP title */
+	#logo_label_3 {
+		padding-right: 10px;
+		color: #fff;
+	}
+/*= END
+  ==================================================== */
+
+/*= Style for search button START
+  ==================================================== */
+	#search_btn {
+		border: none;
+	}
+/*= END
+  ==================================================== */
+
+/*= Style for search input START
+  ==================================================== */
+	#search_input {
+		border: none;
+		padding: 5px 10px;
+	}
+
+	#search_input:focus {
+		background-color: #70B9FE;
+	}
+/*= END
+  ==================================================== */
+
+/*= Style for user information button START
+  ==================================================== */
+	#user_btn {
+		border: none;
+	}
+/*= END
+  ==================================================== */</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <layout class="QHBoxLayout" name="layout_app_label">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="label_app_logo">
+           <property name="font">
+            <font>
+             <family>Arial Black</family>
+             <pointsize>17</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: #313a46;
+color:white;</string>
+           </property>
+           <property name="text">
+            <string>Skills Manager</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btn_cartographie">
+         <property name="font">
+          <font>
+           <pointsize>-1</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Cartographie des emplois</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../resources/icon/resources.qrc">
+           <normaloff>:/icon/home-4-32.ico</normaloff>
+           <normalon>:/icon/home-4-48.ico</normalon>:/icon/home-4-32.ico</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>14</width>
+           <height>14</height>
+          </size>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="autoExclusive">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btn_fiches_poste">
+         <property name="font">
+          <font>
+           <pointsize>-1</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Génération compétences /emploi</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../resources/icon/resources.qrc">
+           <normaloff>:/icon/product-32.ico</normaloff>
+           <normalon>:/icon/product-48.ico</normalon>:/icon/product-32.ico</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>14</width>
+           <height>14</height>
+          </size>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="autoExclusive">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btn_referentiel">
+         <property name="font">
+          <font>
+           <pointsize>-1</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Référentiel de compétences</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../resources/icon/resources.qrc">
+           <normaloff>:/icon/product-32.ico</normaloff>
+           <normalon>:/icon/product-48.ico</normalon>:/icon/product-32.ico</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>14</width>
+           <height>14</height>
+          </size>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="autoExclusive">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btn_dictionnaire">
+         <property name="font">
+          <font>
+           <pointsize>-1</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Dictionnaire de compétences</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../resources/icon/resources.qrc">
+           <normaloff>:/icon/dashboard-5-32.ico</normaloff>
+           <normalon>:/icon/dashboard-5-48.ico</normalon>:/icon/dashboard-5-32.ico</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>14</width>
+           <height>14</height>
+          </size>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="autoExclusive">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btn_referentiel_2">
+         <property name="font">
+          <font>
+           <pointsize>-1</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Cartographie niveaux/compétences</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../resources/icon/resources.qrc">
+           <normaloff>:/icon/product-32.ico</normaloff>
+           <normalon>:/icon/product-48.ico</normalon>:/icon/product-32.ico</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>14</width>
+           <height>14</height>
+          </size>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="autoExclusive">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btn_dictionnaire_2">
+         <property name="font">
+          <font>
+           <pointsize>-1</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Fiches de poste</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../resources/icon/resources.qrc">
+           <normaloff>:/icon/dashboard-5-32.ico</normaloff>
+           <normalon>:/icon/dashboard-5-48.ico</normalon>:/icon/dashboard-5-32.ico</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>14</width>
+           <height>14</height>
+          </size>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="autoExclusive">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btn_parametres">
+         <property name="font">
+          <font>
+           <pointsize>-1</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Configuration prompts</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../resources/icon/resources.qrc">
+           <normaloff>:/icon/dashboard-5-32.ico</normaloff>
+           <normalon>:/icon/dashboard-5-48.ico</normalon>:/icon/dashboard-5-32.ico</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>14</width>
+           <height>14</height>
+          </size>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="autoExclusive">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Orientation::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>373</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="exit_btn_2">
+         <property name="text">
+          <string>Exit</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../resources/icon/resources.qrc">
+           <normaloff>:/icon/close-window-64.ico</normaloff>:/icon/close-window-64.ico</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>14</width>
+           <height>14</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="frame_14">
+      <property name="minimumSize">
+       <size>
+        <width>100</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: white;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_12">
+       <property name="spacing">
+        <number>12</number>
+       </property>
+       <property name="leftMargin">
+        <number>3</number>
+       </property>
+       <property name="topMargin">
+        <number>3</number>
+       </property>
+       <property name="rightMargin">
+        <number>3</number>
+       </property>
+       <property name="bottomMargin">
+        <number>3</number>
+       </property>
+       <item>
+        <widget class="QFrame" name="frame_15">
+         <property name="styleSheet">
+          <string notr="true">background-color: white;</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Shape::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Shadow::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_15">
+          <item>
+           <widget class="QPushButton" name="btn_nouveau_projet">
+            <property name="text">
+             <string>Nouveau projet</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../resources/icon/resources.qrc">
+              <normaloff>:/icon/add.ico</normaloff>:/icon/add.ico</iconset>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btn_ouvrir_projet">
+            <property name="text">
+             <string>Ouvrir projet</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../resources/icon/resources.qrc">
+              <normaloff>:/icon/import.ico</normaloff>:/icon/import.ico</iconset>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btn_modifier_projet">
+            <property name="text">
+             <string>Modifier paramétrage projet</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../resources/icon/resources.qrc">
+              <normaloff>:/icon/edit-11-48.ico</normaloff>:/icon/edit-11-48.ico</iconset>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btn_sauvegarder_projet">
+            <property name="text">
+             <string>Sauvegarder projet</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../resources/icon/resources.qrc">
+              <normaloff>:/icon/save.ico</normaloff>:/icon/save.ico</iconset>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btn_export_projet">
+            <property name="text">
+             <string>Exporter projet</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../resources/icon/resources.qrc">
+              <normaloff>:/icon/import-svgrepo-com 14.22.36.svg</normaloff>:/icon/import-svgrepo-com 14.22.36.svg</iconset>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btn_aide">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="../resources/icon/resources.qrc">
+              <normaloff>:/icon/help.svg</normaloff>:/icon/help.svg</iconset>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="frame_40">
+         <property name="styleSheet">
+          <string notr="true">background-color: #e8e8e8;</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Shape::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Shadow::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_7">
+          <property name="spacing">
+           <number>6</number>
+          </property>
+          <property name="leftMargin">
+           <number>6</number>
+          </property>
+          <property name="topMargin">
+           <number>6</number>
+          </property>
+          <property name="rightMargin">
+           <number>6</number>
+          </property>
+          <property name="bottomMargin">
+           <number>6</number>
+          </property>
+          <item>
+           <widget class="QStackedWidget" name="stackedWidget">
+            <property name="styleSheet">
+             <string notr="true">QComboBox {
+                background-color: #f9f9f9; /* Fond gris clair */
+                color: black; /* Couleur du texte */
+                padding: 2px; /* Espacement intérieur */
+                border: 1px outset #ccc; /* Bordure grise */
+                
+                
+        }
+QComboBox:focus {
+                
+                background-color: #ffffff; /* Fond blanc */
+        }
+QComboBox QAbstractItemView {
+                background-color: #ffffff; /* Fond blanc pour la liste déroulante */
+                color: black; /* Couleur du texte */
+                selection-background-color: #0078D7; /* Fond bleu pour l'élément sélectionné */
+                selection-color: black; /* Texte blanc pour l'élément sélectionné */
+        }
+
+
+
+QLineEdit, QTextEdit {
+                padding: 2px;
+                
+                background-color: #f9f9f9;
+        }
+        QLineEdit:focus, QDateEdit:focus, QTextEdit:focus {
+                
+                background-color: #ffffff;
+        }
+        QDateEdit {
+                padding: 0px;
+                background-color: #f9f9f9;
+        }
+
+QHeaderView::section {
+        background-color: #f4f4f4;  /* Couleur de fond sobre */
+        color: #333333;  /* Couleur du texte */
+        padding: 5px;  /* Espacement interne */
+        border: 1px solid #dcdcdc;  /* Bordure fine */
+        font-weight: bold;  /* Texte en gras */
+        text-align: center;  /* Texte centré */
+        }
+        QHeaderView::section:hover {
+        background-color: #e0e0e0;  /* Couleur de fond au survol */
+        }
+
+QHeaderView::section {
+        background-color: #f4f4f4;  /* Couleur de fond sobre */
+        color: #333333;  /* Couleur du texte */
+        padding: 5px;  /* Espacement interne */
+        border: 1px solid #dcdcdc;  /* Bordure fine */
+        font-weight: bold;  /* Texte en gras */
+        text-align: center;  /* Texte centré */
+        }
+        QHeaderView::section:hover {
+        background-color: #e0e0e0;  /* Couleur de fond au survol */
+        }
+</string>
+            </property>
+            <property name="currentIndex">
+             <number>1</number>
+            </property>
+            <widget class="QWidget" name="page_cartographie">
+             <layout class="QHBoxLayout" name="horizontalLayout">
+              <property name="spacing">
+               <number>12</number>
+              </property>
+              <property name="leftMargin">
+               <number>6</number>
+              </property>
+              <property name="topMargin">
+               <number>6</number>
+              </property>
+              <property name="rightMargin">
+               <number>6</number>
+              </property>
+              <property name="bottomMargin">
+               <number>6</number>
+              </property>
+              <item>
+               <widget class="QFrame" name="frame_72">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: white; </string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::Shape::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Shadow::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_23">
+                 <property name="spacing">
+                  <number>6</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>6</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>6</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>6</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>6</number>
+                 </property>
+                 <item>
+                  <widget class="QFrame" name="frame_78">
+                   <property name="styleSheet">
+                    <string notr="true"/>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::Shape::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Shadow::Raised</enum>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_44">
+                    <property name="spacing">
+                     <number>12</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>6</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>12</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>6</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>12</number>
+                    </property>
+                    <item>
+                     <widget class="QPushButton" name="btn_importer_cartographie_3">
+                      <property name="font">
+                       <font>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true"/>
+                      </property>
+                      <property name="text">
+                       <string>Importer une cartographie des emplois</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="../resources/icon/resources.qrc">
+                        <normaloff>:/icon/export-svgrepo-com.svg</normaloff>:/icon/export-svgrepo-com.svg</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frame_79">
+                   <property name="styleSheet">
+                    <string notr="true">background-color: #e8e8e8;</string>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::Shape::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Shadow::Raised</enum>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_45">
+                    <property name="spacing">
+                     <number>6</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>6</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>6</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>6</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>6</number>
+                    </property>
+                    <item>
+                     <widget class="QLabel" name="label_ou_carto_emplois_3">
+                      <property name="text">
+                       <string> - OU -</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignmentFlag::AlignCenter</set>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frame_73">
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true"/>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::Shape::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Shadow::Raised</enum>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_42">
+                    <property name="spacing">
+                     <number>3</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>6</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>6</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>6</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>6</number>
+                    </property>
+                    <item>
+                     <widget class="QFrame" name="frame_74">
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <bold>false</bold>
+                       </font>
+                      </property>
+                      <property name="layoutDirection">
+                       <enum>Qt::LayoutDirection::LeftToRight</enum>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true"/>
+                      </property>
+                      <layout class="QGridLayout" name="gridLayout_4">
+                       <property name="leftMargin">
+                        <number>6</number>
+                       </property>
+                       <property name="topMargin">
+                        <number>6</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>6</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>6</number>
+                       </property>
+                       <property name="spacing">
+                        <number>6</number>
+                       </property>
+                       <item row="4" column="1">
+                        <widget class="QLineEdit" name="input_nb_filiales_3">
+                         <property name="maximumSize">
+                          <size>
+                           <width>16777215</width>
+                           <height>16777215</height>
+                          </size>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="5" column="1">
+                        <widget class="QSpinBox" name="spin_niveau_digitalisation_3"/>
+                       </item>
+                       <item row="2" column="1">
+                        <widget class="QComboBox" name="combo_type_entreprise_3">
+                         <item>
+                          <property name="text">
+                           <string>Start-up</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>PME</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>ETI</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>Grand groupe</string>
+                          </property>
+                         </item>
+                        </widget>
+                       </item>
+                       <item row="8" column="0" colspan="2">
+                        <widget class="QTextEdit" name="input_commentaire_projet_3">
+                         <property name="maximumSize">
+                          <size>
+                           <width>16777215</width>
+                           <height>100</height>
+                          </size>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="2" column="0">
+                        <widget class="QLabel" name="label_type_entreprise_3">
+                         <property name="text">
+                          <string>Type d’entreprise</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="3" column="1">
+                        <widget class="QLineEdit" name="input_taille_entreprise_3">
+                         <property name="maximumSize">
+                          <size>
+                           <width>16777215</width>
+                           <height>16777215</height>
+                          </size>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="5" column="0">
+                        <widget class="QLabel" name="label_digitalisation_3">
+                         <property name="text">
+                          <string>Niveau de digitalisation</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="7" column="0">
+                        <widget class="QLabel" name="label_commentaire_projet_3">
+                         <property name="layoutDirection">
+                          <enum>Qt::LayoutDirection::RightToLeft</enum>
+                         </property>
+                         <property name="text">
+                          <string>Commentaire</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="3" column="0">
+                        <widget class="QLabel" name="label_taille_entreprise_3">
+                         <property name="text">
+                          <string>Taille de l’entreprise</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="1">
+                        <widget class="QLineEdit" name="input_secteur_activite_3">
+                         <property name="maximumSize">
+                          <size>
+                           <width>16777215</width>
+                           <height>16777215</height>
+                          </size>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="0">
+                        <widget class="QLabel" name="label_secteur_activite_3">
+                         <property name="text">
+                          <string>Secteur d’activité</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="4" column="0">
+                        <widget class="QLabel" name="label_nb_filiales_3">
+                         <property name="text">
+                          <string>Nombre de filiales</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="6" column="0">
+                        <widget class="QCheckBox" name="check_internationale_3">
+                         <property name="text">
+                          <string>Internationale</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="0" colspan="2">
+                        <widget class="QLabel" name="label_23">
+                         <property name="font">
+                          <font>
+                           <bold>true</bold>
+                          </font>
+                         </property>
+                         <property name="text">
+                          <string>Générer une cartographie des emplois - IA</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignmentFlag::AlignCenter</set>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QFrame" name="frame_75">
+                      <property name="frameShape">
+                       <enum>QFrame::Shape::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Shadow::Raised</enum>
+                      </property>
+                      <layout class="QHBoxLayout" name="horizontalLayout_35">
+                       <property name="spacing">
+                        <number>20</number>
+                       </property>
+                       <property name="leftMargin">
+                        <number>6</number>
+                       </property>
+                       <property name="topMargin">
+                        <number>12</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>6</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>12</number>
+                       </property>
+                       <item>
+                        <widget class="QPushButton" name="btn_modifier_inputs_projet_3">
+                         <property name="text">
+                          <string>Modifier</string>
+                         </property>
+                         <property name="icon">
+                          <iconset resource="../resources/icon/resources.qrc">
+                           <normaloff>:/icon/update.ico</normaloff>:/icon/update.ico</iconset>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QPushButton" name="btn_sauvegarder_inputs_projet_3">
+                         <property name="text">
+                          <string>Sauvegarder</string>
+                         </property>
+                         <property name="icon">
+                          <iconset resource="../resources/icon/resources.qrc">
+                           <normaloff>:/icon/save.ico</normaloff>:/icon/save.ico</iconset>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QFrame" name="frame_76">
+                      <property name="frameShape">
+                       <enum>QFrame::Shape::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Shadow::Raised</enum>
+                      </property>
+                      <layout class="QGridLayout" name="gridLayout_8">
+                       <property name="leftMargin">
+                        <number>6</number>
+                       </property>
+                       <property name="topMargin">
+                        <number>6</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>6</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>6</number>
+                       </property>
+                       <property name="spacing">
+                        <number>6</number>
+                       </property>
+                       <item row="1" column="1">
+                        <widget class="QPushButton" name="btn_importer_fichier_client_3">
+                         <property name="text">
+                          <string>Importer un fichier</string>
+                         </property>
+                         <property name="icon">
+                          <iconset resource="../resources/icon/resources.qrc">
+                           <normaloff>:/icon/export-svgrepo-com.svg</normaloff>:/icon/export-svgrepo-com.svg</iconset>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="0">
+                        <widget class="QLineEdit" name="input_type_fichier_importe_3">
+                         <property name="placeholderText">
+                          <string>Type du fichier importé...</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <spacer name="verticalSpacer_4">
+                      <property name="orientation">
+                       <enum>Qt::Orientation::Vertical</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>20</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item>
+                     <widget class="QFrame" name="frame_77">
+                      <property name="frameShape">
+                       <enum>QFrame::Shape::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Shadow::Raised</enum>
+                      </property>
+                      <layout class="QVBoxLayout" name="verticalLayout_43" stretch="0">
+                       <property name="spacing">
+                        <number>6</number>
+                       </property>
+                       <property name="sizeConstraint">
+                        <enum>QLayout::SizeConstraint::SetDefaultConstraint</enum>
+                       </property>
+                       <property name="leftMargin">
+                        <number>6</number>
+                       </property>
+                       <property name="topMargin">
+                        <number>12</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>6</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>12</number>
+                       </property>
+                       <item>
+                        <widget class="QPushButton" name="btn_generer_cartographie_3">
+                         <property name="text">
+                          <string>Générer avec l'IA</string>
+                         </property>
+                         <property name="icon">
+                          <iconset resource="../resources/icon/resources.qrc">
+                           <normaloff>:/icon/generative.ico</normaloff>:/icon/generative.ico</iconset>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="frame_32">
+                <property name="styleSheet">
+                 <string notr="true">background-color: white;</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::Shape::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Shadow::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_8">
+                 <property name="spacing">
+                  <number>6</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>6</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>6</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>6</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>6</number>
+                 </property>
+                 <item>
+                  <widget class="QFrame" name="frame_69">
+                   <property name="frameShape">
+                    <enum>QFrame::Shape::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Shadow::Raised</enum>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_40">
+                    <property name="spacing">
+                     <number>6</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>6</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>6</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>6</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>6</number>
+                    </property>
+                    <item>
+                     <widget class="QLabel" name="hierarchy_header_3">
+                      <property name="font">
+                       <font>
+                        <pointsize>12</pointsize>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>Cartographie des emplois</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frame_70">
+                   <property name="frameShape">
+                    <enum>QFrame::Shape::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Shadow::Raised</enum>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_41">
+                    <property name="spacing">
+                     <number>0</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QTreeWidget" name="tree_cartographie_metiers_3">
+                      <property name="frameShape">
+                       <enum>QFrame::Shape::StyledPanel</enum>
+                      </property>
+                      <property name="tabKeyNavigation">
+                       <bool>true</bool>
+                      </property>
+                      <property name="dragEnabled">
+                       <bool>true</bool>
+                      </property>
+                      <property name="dragDropOverwriteMode">
+                       <bool>true</bool>
+                      </property>
+                      <property name="dragDropMode">
+                       <enum>QAbstractItemView::DragDropMode::DragDrop</enum>
+                      </property>
+                      <property name="animated">
+                       <bool>true</bool>
+                      </property>
+                      <property name="columnCount">
+                       <number>1</number>
+                      </property>
+                      <attribute name="headerVisible">
+                       <bool>false</bool>
+                      </attribute>
+                      <column>
+                       <property name="text">
+                        <string>1</string>
+                       </property>
+                      </column>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frame_12">
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>100</height>
+                    </size>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::Shape::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Shadow::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_28">
+                    <property name="spacing">
+                     <number>0</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>12</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>12</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>12</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>12</number>
+                    </property>
+                    <item>
+                     <widget class="QLabel" name="label_zone_ia_5">
+                      <property name="maximumSize">
+                       <size>
+                        <width>30</width>
+                        <height>30</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="pixmap">
+                       <pixmap resource="../resources/icon/resources.qrc">:/icon/generative.ico</pixmap>
+                      </property>
+                      <property name="scaledContents">
+                       <bool>true</bool>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QTextEdit" name="input_zone_tchat_carto_emplois_3">
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>80</height>
+                       </size>
+                      </property>
+                      <property name="placeholderText">
+                       <string>Discuter avec l'agent conversationnel pour affiner la cartographie ...</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="btn_envoyer_ia_carto_emplois_3">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="../resources/icon/resources.qrc">
+                        <normaloff>:/icon/send.ico</normaloff>:/icon/send.ico</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_34">
+                   <property name="spacing">
+                    <number>6</number>
+                   </property>
+                   <property name="leftMargin">
+                    <number>6</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>12</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>6</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>12</number>
+                   </property>
+                   <item>
+                    <widget class="QPushButton" name="btn_ajouter_familles_3">
+                     <property name="text">
+                      <string>Ajouter Familles</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="../resources/icon/resources.qrc">
+                       <normaloff>:/icon/add.ico</normaloff>:/icon/add.ico</iconset>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="btn_ajouter_sous_familles_3">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
+                     <property name="text">
+                      <string>Ajouter Sous-Familles</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="../resources/icon/resources.qrc">
+                       <normaloff>:/icon/add.ico</normaloff>:/icon/add.ico</iconset>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="btn_ajouter_metier_3">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
+                     <property name="text">
+                      <string>Ajouter Métiers</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="../resources/icon/resources.qrc">
+                       <normaloff>:/icon/add.ico</normaloff>:/icon/add.ico</iconset>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frame_71">
+                   <property name="frameShape">
+                    <enum>QFrame::Shape::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Shadow::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_3">
+                    <property name="leftMargin">
+                     <number>6</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>6</number>
+                    </property>
+                    <item>
+                     <widget class="QPushButton" name="btn_sauvegarder_cartographie_3">
+                      <property name="text">
+                       <string>Sauvegarder</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="../resources/icon/resources.qrc">
+                        <normaloff>:/icon/save.ico</normaloff>:/icon/save.ico</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="btn_exporter_cartographie_3">
+                      <property name="font">
+                       <font>
+                        <family>.AppleSystemUIFont</family>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>Exporter</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="../resources/icon/resources.qrc">
+                        <normaloff>:/icon/import-svgrepo-com 14.22.36.svg</normaloff>:/icon/import-svgrepo-com 14.22.36.svg</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="page_competences_poste">
+             <layout class="QHBoxLayout" name="horizontalLayout_5">
+              <property name="spacing">
+               <number>6</number>
+              </property>
+              <property name="leftMargin">
+               <number>6</number>
+              </property>
+              <property name="topMargin">
+               <number>6</number>
+              </property>
+              <property name="rightMargin">
+               <number>6</number>
+              </property>
+              <property name="bottomMargin">
+               <number>6</number>
+              </property>
+              <item>
+               <widget class="QFrame" name="frame_3">
+                <property name="styleSheet">
+                 <string notr="true">background-color: white;</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::Shape::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Shadow::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_6">
+                 <property name="spacing">
+                  <number>6</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>6</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>6</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>6</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>6</number>
+                 </property>
+                 <item>
+                  <widget class="QFrame" name="frame_47">
+                   <property name="frameShape">
+                    <enum>QFrame::Shape::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Shadow::Raised</enum>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_24">
+                    <property name="spacing">
+                     <number>12</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>12</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>12</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>12</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>12</number>
+                    </property>
+                    <item>
+                     <widget class="QPushButton" name="btn_importer_cartographie_competences_emplois">
+                      <property name="font">
+                       <font>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>Importer une cartographie compétences/emploi</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="../resources/icon/resources.qrc">
+                        <normaloff>:/icon/import-svgrepo-com 14.22.36.svg</normaloff>:/icon/import-svgrepo-com 14.22.36.svg</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frame_50">
+                   <property name="styleSheet">
+                    <string notr="true">background-color: #e8e8e8;</string>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::Shape::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Shadow::Raised</enum>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_27">
+                    <property name="spacing">
+                     <number>3</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>3</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>3</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>3</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>3</number>
+                    </property>
+                    <item>
+                     <widget class="QLabel" name="label_19">
+                      <property name="text">
+                       <string>- OU -</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignmentFlag::AlignCenter</set>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frame_49">
+                   <property name="frameShape">
+                    <enum>QFrame::Shape::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Shadow::Raised</enum>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_26">
+                    <property name="spacing">
+                     <number>3</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>3</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>3</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>3</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>3</number>
+                    </property>
+                    <item>
+                     <widget class="QLabel" name="label_11">
+                      <property name="font">
+                       <font>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>Générer cartographie emplois/compétences par IA</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignmentFlag::AlignCenter</set>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frame_2">
+                   <property name="font">
+                    <font>
+                     <bold>false</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color:white;</string>
+                   </property>
+                   <layout class="QGridLayout" name="gridLayout_2">
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="horizontalSpacing">
+                     <number>20</number>
+                    </property>
+                    <property name="verticalSpacing">
+                     <number>6</number>
+                    </property>
+                    <item row="0" column="1">
+                     <widget class="QSpinBox" name="spin_nombre_niveaux_competences">
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="4" column="0">
+                     <widget class="QLabel" name="label">
+                      <property name="text">
+                       <string>Nombre miximal de compétences par emploi</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="0" column="0">
+                     <widget class="QLabel" name="label_2">
+                      <property name="text">
+                       <string>Nombre de niveaux par competence</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="3" column="0">
+                     <widget class="QLabel" name="label_4">
+                      <property name="text">
+                       <string>Nombre minimal de compétences par emploi</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="4" column="1">
+                     <widget class="QSpinBox" name="spin_max_nombre_competences">
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="3" column="1">
+                     <widget class="QSpinBox" name="spin_min_nombre_competences"/>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frame_33">
+                   <property name="frameShape">
+                    <enum>QFrame::Shape::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Shadow::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_21">
+                    <property name="spacing">
+                     <number>6</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>12</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>12</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>12</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>12</number>
+                    </property>
+                    <item>
+                     <widget class="QPushButton" name="btn_modifier_parametres_competence">
+                      <property name="text">
+                       <string>Modifier</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="../resources/icon/resources.qrc">
+                        <normaloff>:/icon/update.ico</normaloff>:/icon/update.ico</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="btn_sauvegarder_parametres_competence">
+                      <property name="text">
+                       <string>Sauvegarder</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="../resources/icon/resources.qrc">
+                        <normaloff>:/icon/save.ico</normaloff>:/icon/save.ico</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frame_34">
+                   <property name="frameShape">
+                    <enum>QFrame::Shape::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Shadow::Raised</enum>
+                   </property>
+                   <layout class="QGridLayout" name="gridLayout_6">
+                    <property name="leftMargin">
+                     <number>12</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>12</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>12</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>12</number>
+                    </property>
+                    <property name="horizontalSpacing">
+                     <number>3</number>
+                    </property>
+                    <property name="verticalSpacing">
+                     <number>6</number>
+                    </property>
+                    <item row="0" column="0">
+                     <widget class="QLabel" name="label_5">
+                      <property name="text">
+                       <string>Type de contenu des fichiers</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="0" column="2">
+                     <widget class="QLineEdit" name="input_autre_type">
+                      <property name="enabled">
+                       <bool>false</bool>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="1" column="0">
+                     <widget class="QPushButton" name="btn_choisir_dossier_fichiers">
+                      <property name="text">
+                       <string>Choisir un dossier</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="../resources/icon/resources.qrc">
+                        <normaloff>:/icon/import.ico</normaloff>:/icon/import.ico</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="1" column="1">
+                     <widget class="QPushButton" name="btn_ajouter_zone_fichier">
+                      <property name="maximumSize">
+                       <size>
+                        <width>30</width>
+                        <height>30</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="../resources/icon/resources.qrc">
+                        <normaloff>:/icon/add.ico</normaloff>:/icon/add.ico</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frame_48">
+                   <property name="frameShape">
+                    <enum>QFrame::Shape::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Shadow::Raised</enum>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_25">
+                    <item>
+                     <widget class="QPushButton" name="btn_generateur_competences">
+                      <property name="font">
+                       <font>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>Lancer le générateur IA des compétences par emploi</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="../resources/icon/resources.qrc">
+                        <normaloff>:/icon/generative.ico</normaloff>:/icon/generative.ico</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frame_51">
+                   <property name="frameShape">
+                    <enum>QFrame::Shape::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Shadow::Raised</enum>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_28">
+                    <property name="spacing">
+                     <number>3</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>3</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>3</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>3</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>3</number>
+                    </property>
+                    <item>
+                     <widget class="QLabel" name="label_6">
+                      <property name="font">
+                       <font>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>Cartographie des emplois</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QTreeWidget" name="tree_cartographie_metier_generateur_competence">
+                      <column>
+                       <property name="text">
+                        <string notr="true">1</string>
+                       </property>
+                      </column>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="frame_4">
+                <property name="styleSheet">
+                 <string notr="true">background-color: white;</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::Shape::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Shadow::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_5">
+                 <property name="spacing">
+                  <number>6</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>6</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>6</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>6</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>6</number>
+                 </property>
+                 <item>
+                  <widget class="QFrame" name="frame_8">
+                   <property name="frameShape">
+                    <enum>QFrame::Shape::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Shadow::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_12">
+                    <property name="spacing">
+                     <number>3</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QLabel" name="label_8">
+                      <property name="maximumSize">
+                       <size>
+                        <width>30</width>
+                        <height>30</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="pixmap">
+                       <pixmap resource="../resources/icon/resources.qrc">:/icon/search.ico</pixmap>
+                      </property>
+                      <property name="scaledContents">
+                       <bool>true</bool>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLineEdit" name="input_competence">
+                      <property name="placeholderText">
+                       <string>Ajouter une compétence</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frame_10">
+                   <property name="frameShape">
+                    <enum>QFrame::Shape::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Shadow::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_11">
+                    <property name="leftMargin">
+                     <number>3</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>3</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>3</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>6</number>
+                    </property>
+                    <item>
+                     <widget class="QLabel" name="label_9">
+                      <property name="text">
+                       <string>Niveau requis</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QComboBox" name="combo_niveau_requis"/>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="label_10">
+                      <property name="text">
+                       <string>Type de compétence</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QComboBox" name="combo_type_competence"/>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frame_6">
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>70</height>
+                    </size>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::Shape::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Shadow::Raised</enum>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_31">
+                    <property name="spacing">
+                     <number>6</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QTextEdit" name="input_definition_niveau_competence">
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
+                      <property name="placeholderText">
+                       <string>Définition du niveau pour cette compétence</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frame_9">
+                   <property name="frameShape">
+                    <enum>QFrame::Shape::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Shadow::Raised</enum>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_7">
+                    <property name="spacing">
+                     <number>2</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>3</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>3</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>3</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>6</number>
+                    </property>
+                    <item>
+                     <widget class="QPushButton" name="btn_ajouter_competence">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string>Insérer compétence</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="../resources/icon/resources.qrc">
+                        <normaloff>:/icon/add.ico</normaloff>:/icon/add.ico</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frame_53">
+                   <property name="frameShape">
+                    <enum>QFrame::Shape::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Shadow::Raised</enum>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_30">
+                    <property name="spacing">
+                     <number>6</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>3</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>3</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>3</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>3</number>
+                    </property>
+                    <item>
+                     <widget class="QTableWidget" name="table_competences"/>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frame_7">
+                   <property name="frameShape">
+                    <enum>QFrame::Shape::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Shadow::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_4">
+                    <property name="spacing">
+                     <number>6</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>3</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>3</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>3</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>3</number>
+                    </property>
+                    <item>
+                     <widget class="QPushButton" name="btn_supprimer_competence">
+                      <property name="text">
+                       <string>Supprimer compétences</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="../resources/icon/resources.qrc">
+                        <normaloff>:/icon/delete.ico</normaloff>:/icon/delete.ico</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="btn_sauvegarder_liste_competence">
+                      <property name="text">
+                       <string>Sauvegarder la liste des compétences</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="../resources/icon/resources.qrc">
+                        <normaloff>:/icon/save.ico</normaloff>:/icon/save.ico</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frame_5">
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>100</height>
+                    </size>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::Shape::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Shadow::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_6">
+                    <property name="spacing">
+                     <number>0</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>12</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>12</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>12</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>12</number>
+                    </property>
+                    <item>
+                     <widget class="QLabel" name="label_7">
+                      <property name="maximumSize">
+                       <size>
+                        <width>30</width>
+                        <height>30</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="pixmap">
+                       <pixmap resource="../resources/icon/resources.qrc">:/icon/generative.ico</pixmap>
+                      </property>
+                      <property name="scaledContents">
+                       <bool>true</bool>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QTextEdit" name="input_zone_tchat_generateur_competence">
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
+                      <property name="placeholderText">
+                       <string>Discuter avec l'agent conversationnel pour affiner la cartographie ...</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="btn_envoyer_ia_generateur_competence">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="../resources/icon/resources.qrc">
+                        <normaloff>:/icon/send.ico</normaloff>:/icon/send.ico</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frame_52">
+                   <property name="frameShape">
+                    <enum>QFrame::Shape::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Shadow::Raised</enum>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_29">
+                    <property name="spacing">
+                     <number>6</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>3</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>3</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>3</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>3</number>
+                    </property>
+                    <item>
+                     <widget class="QPushButton" name="btn_exporter_carto_competence_emploi">
+                      <property name="text">
+                       <string>Exporter la cartographie compétences/emploi</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="../resources/icon/resources.qrc">
+                        <normaloff>:/icon/import-svgrepo-com 14.22.36.svg</normaloff>:/icon/import-svgrepo-com 14.22.36.svg</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="page_referentiel">
+             <layout class="QVBoxLayout" name="verticalLayout">
+              <property name="spacing">
+               <number>3</number>
+              </property>
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QFrame" name="frame_19">
+                <property name="styleSheet">
+                 <string notr="true">background-color: white;</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::Shape::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Shadow::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_13">
+                 <property name="spacing">
+                  <number>6</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>12</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>12</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>12</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>12</number>
+                 </property>
+                 <item>
+                  <widget class="QPushButton" name="btn_importer_referentiel_competences">
+                   <property name="font">
+                    <font>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>Importer un référentiel de compétences</string>
+                   </property>
+                   <property name="icon">
+                    <iconset resource="../resources/icon/resources.qrc">
+                     <normaloff>:/icon/export-svgrepo-com.svg</normaloff>:/icon/export-svgrepo-com.svg</iconset>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="frame_54">
+                <property name="frameShape">
+                 <enum>QFrame::Shape::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Shadow::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_32">
+                 <property name="spacing">
+                  <number>6</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>3</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>3</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>3</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>3</number>
+                 </property>
+                 <item>
+                  <widget class="QLabel" name="label_12">
+                   <property name="text">
+                    <string>- OU -</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignmentFlag::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="frame_24">
+                <property name="styleSheet">
+                 <string notr="true">background-color: white;</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::Shape::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Shadow::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_16">
+                 <item>
+                  <widget class="QLabel" name="label_21">
+                   <property name="font">
+                    <font>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>Générer le référentiel de compétences par IA</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frame_38">
+                   <property name="frameShape">
+                    <enum>QFrame::Shape::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Shadow::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_26">
+                    <property name="spacing">
+                     <number>6</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>3</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>3</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>3</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>3</number>
+                    </property>
+                    <item>
+                     <widget class="QLabel" name="label_17">
+                      <property name="text">
+                       <string>Nombre de compétences à générer</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QSpinBox" name="spin_nb_competences_projet_referentiel"/>
+                    </item>
+                    <item>
+                     <spacer name="horizontalSpacer_4">
+                      <property name="orientation">
+                       <enum>Qt::Orientation::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frame_20">
+                   <property name="frameShape">
+                    <enum>QFrame::Shape::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Shadow::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_14">
+                    <property name="spacing">
+                     <number>6</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>12</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>12</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>12</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>12</number>
+                    </property>
+                    <item>
+                     <widget class="QPushButton" name="btn_generer_referentiel_competences_ia">
+                      <property name="font">
+                       <font>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>Générer le référentiel de compétences par IA</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="../resources/icon/resources.qrc">
+                        <normaloff>:/icon/generative.ico</normaloff>:/icon/generative.ico</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frame_55">
+                   <property name="frameShape">
+                    <enum>QFrame::Shape::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Shadow::Raised</enum>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_33">
+                    <property name="spacing">
+                     <number>6</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QListWidget" name="list_referentiel_competences">
+                      <property name="dragEnabled">
+                       <bool>true</bool>
+                      </property>
+                      <property name="dragDropMode">
+                       <enum>QAbstractItemView::DragDropMode::DragDrop</enum>
+                      </property>
+                      <property name="alternatingRowColors">
+                       <bool>true</bool>
+                      </property>
+                      <property name="selectionMode">
+                       <enum>QAbstractItemView::SelectionMode::MultiSelection</enum>
+                      </property>
+                      <property name="selectionBehavior">
+                       <enum>QAbstractItemView::SelectionBehavior::SelectRows</enum>
+                      </property>
+                      <property name="wordWrap">
+                       <bool>true</bool>
+                      </property>
+                      <property name="sortingEnabled">
+                       <bool>true</bool>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frame_13">
+                   <property name="frameShape">
+                    <enum>QFrame::Shape::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Shadow::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_2">
+                    <property name="spacing">
+                     <number>6</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>12</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>12</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>12</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>12</number>
+                    </property>
+                    <item>
+                     <widget class="QPushButton" name="btn_ajouter_competence_referentiel">
+                      <property name="text">
+                       <string>Ajouter une compétence</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="../resources/icon/resources.qrc">
+                        <normaloff>:/icon/add.ico</normaloff>:/icon/add.ico</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="btn_supprimer_competence_referentiel">
+                      <property name="text">
+                       <string>Supprimer une compétence</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="../resources/icon/resources.qrc">
+                        <normaloff>:/icon/delete.ico</normaloff>:/icon/delete.ico</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="btn_fusionner_competence_referentiel">
+                      <property name="text">
+                       <string>Fusionner les compétences</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="../resources/icon/resources.qrc">
+                        <normaloff>:/icon/fusionner.ico</normaloff>:/icon/fusionner.ico</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="frame_18">
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>100</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: white;</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::Shape::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Shadow::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_25">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>12</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>12</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>12</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>12</number>
+                 </property>
+                 <item>
+                  <widget class="QLabel" name="label_zone_ia_2">
+                   <property name="maximumSize">
+                    <size>
+                     <width>30</width>
+                     <height>30</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="pixmap">
+                    <pixmap resource="../resources/icon/resources.qrc">:/icon/generative.ico</pixmap>
+                   </property>
+                   <property name="scaledContents">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QTextEdit" name="input_zone_tchat_referentiel">
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>80</height>
+                    </size>
+                   </property>
+                   <property name="placeholderText">
+                    <string>Discuter avec l'agent conversationnel pour affiner la cartographie ...</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="btn_envoyer_ia_referentiel">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="icon">
+                    <iconset resource="../resources/icon/resources.qrc">
+                     <normaloff>:/icon/send.ico</normaloff>:/icon/send.ico</iconset>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="frame_37">
+                <property name="styleSheet">
+                 <string notr="true">background-color: white;</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::Shape::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Shadow::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_24">
+                 <property name="spacing">
+                  <number>6</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>12</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>12</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>12</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>12</number>
+                 </property>
+                 <item>
+                  <widget class="QPushButton" name="btn_sauvegarder_referentiel_competence">
+                   <property name="text">
+                    <string>Sauvegarder le référentiel des compétences</string>
+                   </property>
+                   <property name="icon">
+                    <iconset resource="../resources/icon/resources.qrc">
+                     <normaloff>:/icon/save.ico</normaloff>:/icon/save.ico</iconset>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="btn_exporter_referentiel_competence">
+                   <property name="text">
+                    <string>Exporter le référentiel des compétences</string>
+                   </property>
+                   <property name="icon">
+                    <iconset resource="../resources/icon/resources.qrc">
+                     <normaloff>:/icon/import-svgrepo-com 14.22.36.svg</normaloff>:/icon/import-svgrepo-com 14.22.36.svg</iconset>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="page_dictionnaire">
+             <layout class="QVBoxLayout" name="verticalLayout_10">
+              <property name="spacing">
+               <number>3</number>
+              </property>
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QFrame" name="frame_28">
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: white;</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::Shape::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Shadow::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_15">
+                 <property name="spacing">
+                  <number>6</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QFrame" name="frame_22">
+                   <property name="styleSheet">
+                    <string notr="true">background-color: white;</string>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::Shape::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Shadow::Raised</enum>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_11">
+                    <property name="spacing">
+                     <number>6</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>12</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>12</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>12</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>12</number>
+                    </property>
+                    <item>
+                     <widget class="QPushButton" name="btn_importer_dictionnaire_competences">
+                      <property name="font">
+                       <font>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>Importer un dictionnaire de compétences</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="../resources/icon/resources.qrc">
+                        <normaloff>:/icon/export-svgrepo-com.svg</normaloff>:/icon/export-svgrepo-com.svg</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frame_58">
+                   <property name="styleSheet">
+                    <string notr="true">background-color: #e8e8e8;</string>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::Shape::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Shadow::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_10">
+                    <property name="spacing">
+                     <number>6</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>3</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>3</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>3</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>3</number>
+                    </property>
+                    <item>
+                     <widget class="QLabel" name="label_13">
+                      <property name="text">
+                       <string>- OU -</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignmentFlag::AlignCenter</set>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frame_23">
+                   <property name="styleSheet">
+                    <string notr="true">background-color: white;</string>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::Shape::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Shadow::Raised</enum>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_13">
+                    <property name="spacing">
+                     <number>8</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>12</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>12</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>12</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>12</number>
+                    </property>
+                    <item>
+                     <widget class="QLabel" name="label_20">
+                      <property name="font">
+                       <font>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>Générer le dictionnaire de compétences par IA</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignmentFlag::AlignCenter</set>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QFrame" name="frame_25">
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>100</height>
+                       </size>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::Shape::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Shadow::Raised</enum>
+                      </property>
+                      <layout class="QHBoxLayout" name="horizontalLayout_18">
+                       <property name="spacing">
+                        <number>20</number>
+                       </property>
+                       <property name="leftMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="topMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
+                       <item>
+                        <widget class="QLabel" name="label_14">
+                         <property name="text">
+                          <string>Nombre de niveaux par compétence</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QSpinBox" name="spin_nombre_niveaux_competences_dictionnaire">
+                         <property name="enabled">
+                          <bool>false</bool>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>70</width>
+                           <height>16777215</height>
+                          </size>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <spacer name="horizontalSpacer_2">
+                         <property name="orientation">
+                          <enum>Qt::Orientation::Horizontal</enum>
+                         </property>
+                         <property name="sizeHint" stdset="0">
+                          <size>
+                           <width>40</width>
+                           <height>20</height>
+                          </size>
+                         </property>
+                        </spacer>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QFrame" name="frame_26">
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::Shape::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Shadow::Raised</enum>
+                      </property>
+                      <layout class="QHBoxLayout" name="horizontalLayout_9">
+                       <property name="spacing">
+                        <number>3</number>
+                       </property>
+                       <property name="leftMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="topMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
+                       <item>
+                        <widget class="QFrame" name="frame_27">
+                         <property name="frameShape">
+                          <enum>QFrame::Shape::StyledPanel</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Shadow::Raised</enum>
+                         </property>
+                         <layout class="QVBoxLayout" name="verticalLayout_14">
+                          <property name="spacing">
+                           <number>6</number>
+                          </property>
+                          <property name="leftMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="topMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="rightMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="bottomMargin">
+                           <number>0</number>
+                          </property>
+                          <item>
+                           <widget class="QLabel" name="label_15">
+                            <property name="text">
+                             <string>Sélectionner le niveau à définir :</string>
+                            </property>
+                            <property name="wordWrap">
+                             <bool>false</bool>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QComboBox" name="combo_niveau_competence_a_definir"/>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QTextEdit" name="input_definition_niveau_competence_2">
+                         <property name="minimumSize">
+                          <size>
+                           <width>0</width>
+                           <height>0</height>
+                          </size>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>16777215</width>
+                           <height>80</height>
+                          </size>
+                         </property>
+                         <property name="placeholderText">
+                          <string>Préciser la défintion du niveau sélectionné</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QPushButton" name="btn_generer_dictionnaire_ia">
+                         <property name="sizePolicy">
+                          <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                           <horstretch>0</horstretch>
+                           <verstretch>0</verstretch>
+                          </sizepolicy>
+                         </property>
+                         <property name="text">
+                          <string/>
+                         </property>
+                         <property name="icon">
+                          <iconset resource="../resources/icon/resources.qrc">
+                           <normaloff>:/icon/save.ico</normaloff>:/icon/save.ico</iconset>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QFrame" name="frame_35">
+                      <property name="frameShape">
+                       <enum>QFrame::Shape::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Shadow::Raised</enum>
+                      </property>
+                      <layout class="QHBoxLayout" name="horizontalLayout_22">
+                       <property name="spacing">
+                        <number>6</number>
+                       </property>
+                       <property name="leftMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="topMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
+                       <item>
+                        <widget class="QLabel" name="label_3">
+                         <property name="text">
+                          <string>Nombre de compétences à générer</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QSpinBox" name="spin_nb_competences_projet_dictionnaire"/>
+                       </item>
+                       <item>
+                        <spacer name="horizontalSpacer_3">
+                         <property name="orientation">
+                          <enum>Qt::Orientation::Horizontal</enum>
+                         </property>
+                         <property name="sizeHint" stdset="0">
+                          <size>
+                           <width>40</width>
+                           <height>20</height>
+                          </size>
+                         </property>
+                        </spacer>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="btn_generer_dictionnaire_ia_2">
+                      <property name="font">
+                       <font>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>Générer le dictionnaire de compétences par IA</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="../resources/icon/resources.qrc">
+                        <normaloff>:/icon/folder.ico</normaloff>:/icon/folder.ico</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="frame_56">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: white;</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::Shape::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Shadow::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_29">
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QTableWidget" name="table_dictionnaire_competences">
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="dragEnabled">
+                    <bool>true</bool>
+                   </property>
+                   <property name="dragDropMode">
+                    <enum>QAbstractItemView::DragDropMode::DragDrop</enum>
+                   </property>
+                   <property name="alternatingRowColors">
+                    <bool>true</bool>
+                   </property>
+                   <property name="selectionMode">
+                    <enum>QAbstractItemView::SelectionMode::MultiSelection</enum>
+                   </property>
+                   <property name="selectionBehavior">
+                    <enum>QAbstractItemView::SelectionBehavior::SelectRows</enum>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="frame_21">
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: white;</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::Shape::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Shadow::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_8">
+                 <property name="spacing">
+                  <number>6</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>12</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>12</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>12</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>12</number>
+                 </property>
+                 <item>
+                  <widget class="QPushButton" name="btn_ajouter_comptence_dictionnaire">
+                   <property name="text">
+                    <string>Ajouter une compétence</string>
+                   </property>
+                   <property name="icon">
+                    <iconset resource="../resources/icon/resources.qrc">
+                     <normaloff>:/icon/add.ico</normaloff>:/icon/add.ico</iconset>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="btn_supprimer_competence_disctionnaire">
+                   <property name="text">
+                    <string>Supprimer une compétence</string>
+                   </property>
+                   <property name="icon">
+                    <iconset resource="../resources/icon/resources.qrc">
+                     <normaloff>:/icon/delete.ico</normaloff>:/icon/delete.ico</iconset>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="frame_39">
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>100</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color:white;</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::Shape::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Shadow::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_27">
+                 <property name="spacing">
+                  <number>3</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>3</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>3</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>3</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>3</number>
+                 </property>
+                 <item>
+                  <widget class="QLabel" name="label_zone_ia_3">
+                   <property name="maximumSize">
+                    <size>
+                     <width>30</width>
+                     <height>30</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="pixmap">
+                    <pixmap resource="../resources/icon/resources.qrc">:/icon/generative.ico</pixmap>
+                   </property>
+                   <property name="scaledContents">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QTextEdit" name="input_zone_tchat_dictionnaire">
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>80</height>
+                    </size>
+                   </property>
+                   <property name="placeholderText">
+                    <string>Discuter avec l'agent conversationnel pour affiner la cartographie ...</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="btn_envoyer_ia_dictionnaire">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="icon">
+                    <iconset resource="../resources/icon/resources.qrc">
+                     <normaloff>:/icon/send.ico</normaloff>:/icon/send.ico</iconset>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="frame_36">
+                <property name="styleSheet">
+                 <string notr="true">background-color: white;</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::Shape::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Shadow::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_23">
+                 <property name="spacing">
+                  <number>6</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>12</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>12</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>12</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>12</number>
+                 </property>
+                 <item>
+                  <widget class="QPushButton" name="btn_sauvegarder_dictionnaire">
+                   <property name="styleSheet">
+                    <string notr="true">background-color: white;</string>
+                   </property>
+                   <property name="text">
+                    <string>Sauvegarder le dictionnaire des compétences</string>
+                   </property>
+                   <property name="icon">
+                    <iconset resource="../resources/icon/resources.qrc">
+                     <normaloff>:/icon/save.ico</normaloff>:/icon/save.ico</iconset>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="btn_exporter_dictionnaire">
+                   <property name="text">
+                    <string>Exporter le dictionnaire des compétences</string>
+                   </property>
+                   <property name="icon">
+                    <iconset resource="../resources/icon/resources.qrc">
+                     <normaloff>:/icon/import-svgrepo-com 14.22.36.svg</normaloff>:/icon/import-svgrepo-com 14.22.36.svg</iconset>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="page_niveaux_competences">
+             <layout class="QVBoxLayout" name="verticalLayout_17">
+              <property name="spacing">
+               <number>6</number>
+              </property>
+              <property name="leftMargin">
+               <number>6</number>
+              </property>
+              <property name="topMargin">
+               <number>6</number>
+              </property>
+              <property name="rightMargin">
+               <number>6</number>
+              </property>
+              <property name="bottomMargin">
+               <number>6</number>
+              </property>
+              <item>
+               <widget class="QFrame" name="frame_29">
+                <property name="styleSheet">
+                 <string notr="true">background-color: white;</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::Shape::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Shadow::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_16">
+                 <property name="spacing">
+                  <number>3</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>12</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>12</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>12</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>12</number>
+                 </property>
+                 <item>
+                  <widget class="QLabel" name="label_16">
+                   <property name="text">
+                    <string>Sélectionner une sous-famille des emplois</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="combo_sous_famille">
+                   <property name="minimumSize">
+                    <size>
+                     <width>200</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer">
+                   <property name="orientation">
+                    <enum>Qt::Orientation::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="frame_30">
+                <property name="styleSheet">
+                 <string notr="true">background-color: white;</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::Shape::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Shadow::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_19">
+                 <property name="spacing">
+                  <number>6</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>3</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>3</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>3</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>3</number>
+                 </property>
+                 <item>
+                  <widget class="QTableWidget" name="table_niveaux_competence"/>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="frame_31">
+                <property name="styleSheet">
+                 <string notr="true">background-color: white;</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::Shape::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Shadow::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_20">
+                 <property name="spacing">
+                  <number>6</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>12</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>12</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>12</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>12</number>
+                 </property>
+                 <item>
+                  <widget class="QPushButton" name="btn_sauvegarder_carto_niveaux_competences">
+                   <property name="text">
+                    <string>Sauvegarder</string>
+                   </property>
+                   <property name="icon">
+                    <iconset resource="../resources/icon/resources.qrc">
+                     <normaloff>:/icon/save.ico</normaloff>:/icon/save.ico</iconset>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="btn_exporter_carto_niveaux_competences">
+                   <property name="text">
+                    <string>Exporter</string>
+                   </property>
+                   <property name="icon">
+                    <iconset resource="../resources/icon/resources.qrc">
+                     <normaloff>:/icon/import-svgrepo-com 14.22.36.svg</normaloff>:/icon/import-svgrepo-com 14.22.36.svg</iconset>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="page_fiche_poste">
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_17">
+              <property name="spacing">
+               <number>6</number>
+              </property>
+              <property name="leftMargin">
+               <number>6</number>
+              </property>
+              <property name="topMargin">
+               <number>6</number>
+              </property>
+              <property name="rightMargin">
+               <number>6</number>
+              </property>
+              <property name="bottomMargin">
+               <number>6</number>
+              </property>
+              <item>
+               <widget class="QFrame" name="frame">
+                <property name="styleSheet">
+                 <string notr="true">background-color:#e8e8e8;</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::Shape::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Shadow::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_22">
+                 <property name="spacing">
+                  <number>6</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>6</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>6</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>6</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>6</number>
+                 </property>
+                 <item>
+                  <widget class="QFrame" name="frame_16">
+                   <property name="styleSheet">
+                    <string notr="true">background-color:white;</string>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::Shape::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Shadow::Raised</enum>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_20">
+                    <item>
+                     <widget class="QLabel" name="label_29">
+                      <property name="font">
+                       <font>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>Paramétrage des fiches de Poste</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QFrame" name="frame_44">
+                      <property name="frameShape">
+                       <enum>QFrame::Shape::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Shadow::Raised</enum>
+                      </property>
+                      <layout class="QGridLayout" name="gridLayout">
+                       <item row="1" column="1">
+                        <widget class="QSpinBox" name="spin_min_micro_activites"/>
+                       </item>
+                       <item row="0" column="1">
+                        <widget class="QSpinBox" name="spin_min_macro_activites"/>
+                       </item>
+                       <item row="1" column="0">
+                        <widget class="QLabel" name="label_26">
+                         <property name="text">
+                          <string>Nombre de Micro-activités:</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="2">
+                        <widget class="QSpinBox" name="spin_max_macro_activites"/>
+                       </item>
+                       <item row="1" column="2">
+                        <widget class="QSpinBox" name="spin_max_micro_activites"/>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QFrame" name="frame_45">
+                      <property name="frameShape">
+                       <enum>QFrame::Shape::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Shadow::Raised</enum>
+                      </property>
+                      <layout class="QHBoxLayout" name="horizontalLayout_31">
+                       <property name="leftMargin">
+                        <number>12</number>
+                       </property>
+                       <property name="topMargin">
+                        <number>12</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>12</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>12</number>
+                       </property>
+                       <item>
+                        <widget class="QPushButton" name="btn_modifier_parametrage_fichedeposte">
+                         <property name="text">
+                          <string>Modifier</string>
+                         </property>
+                         <property name="icon">
+                          <iconset resource="../resources/icon/resources.qrc">
+                           <normaloff>:/icon/update.ico</normaloff>:/icon/update.ico</iconset>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QPushButton" name="btn_sauvegarder_parametrage_fichedeposte">
+                         <property name="text">
+                          <string>Sauvegarder</string>
+                         </property>
+                         <property name="icon">
+                          <iconset resource="../resources/icon/resources.qrc">
+                           <normaloff>:/icon/save.ico</normaloff>:/icon/save.ico</iconset>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frame_17">
+                   <property name="styleSheet">
+                    <string notr="true">background-color:white;</string>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::Shape::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Shadow::Raised</enum>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_9">
+                    <item>
+                     <widget class="QLabel" name="label_30">
+                      <property name="font">
+                       <font>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>Cartographie des emplois</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QTreeWidget" name="tree_carto_emploi_fichedeposte">
+                      <column>
+                       <property name="text">
+                        <string notr="true">1</string>
+                       </property>
+                      </column>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frame_46">
+                   <property name="styleSheet">
+                    <string notr="true">background-color:white;</string>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::Shape::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Shadow::Raised</enum>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_21">
+                    <item>
+                     <widget class="QPushButton" name="btn_lancer_generateur_activites">
+                      <property name="font">
+                       <font>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>Lancer le générateur IA</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="../resources/icon/resources.qrc">
+                        <normaloff>:/icon/generative.ico</normaloff>:/icon/generative.ico</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="frame_11">
+                <property name="styleSheet">
+                 <string notr="true">background-color:#e8e8e8;</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::Shape::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Shadow::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_19">
+                 <property name="spacing">
+                  <number>6</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>6</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>6</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>6</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>6</number>
+                 </property>
+                 <item>
+                  <widget class="QFrame" name="frame_41">
+                   <property name="styleSheet">
+                    <string notr="true">background-color:white;</string>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::Shape::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Shadow::Raised</enum>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_18">
+                    <item>
+                     <widget class="QLabel" name="label_24">
+                      <property name="font">
+                       <font>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>Finalité du poste</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QTextEdit" name="input_finalite_poste">
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>80</height>
+                       </size>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frame_42">
+                   <property name="styleSheet">
+                    <string notr="true">background-color:white;</string>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::Shape::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Shadow::Raised</enum>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_3">
+                    <item>
+                     <widget class="QLabel" name="label_18">
+                      <property name="font">
+                       <font>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>Compétences Requises</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QTableWidget" name="table_competences_fichedeposte"/>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frame_43">
+                   <property name="styleSheet">
+                    <string notr="true">background-color:white;</string>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::Shape::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Shadow::Raised</enum>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_4">
+                    <item>
+                     <widget class="QLabel" name="label_22">
+                      <property name="font">
+                       <font>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>Activités</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QTreeWidget" name="tree_activites_fichedeposte">
+                      <column>
+                       <property name="text">
+                        <string notr="true">1</string>
+                       </property>
+                      </column>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="page_parametres"/>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../resources/icon/resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

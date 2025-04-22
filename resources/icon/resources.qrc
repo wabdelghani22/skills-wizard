@@ -1,0 +1,42 @@
+<RCC>
+  <qresource prefix="icon">
+    <file>emploi-selectionne2_resized.ico</file>
+    <file>emploi-selectionne2.ico</file>
+    <file>emploi-selectionne.ico</file>
+    <file>briefcase.ico</file>
+    <file>folder-git-2.ico</file>
+    <file>folder.ico</file>
+    <file>send.ico</file>
+    <file>fusionner.ico</file>
+    <file>generative.ico</file>
+    <file>dashboard-5-48.ico</file>
+    <file>home-4-48.ico</file>
+    <file>product-48.ico</file>
+    <file>close-window-64.ico</file>
+    <file>dashboard-5-32.ico</file>
+    <file>product-32.ico</file>
+    <file>home-4-32.ico</file>
+    <file>add.ico</file>
+    <file>clear.ico</file>
+    <file>dashboard.svg</file>
+    <file>delete.ico</file>
+    <file>double fleche.ico</file>
+    <file>edit-11-48.ico</file>
+    <file>expand_more.ico</file>
+    <file>export-svgrepo-com.svg</file>
+    <file>export.svg</file>
+    <file>help.svg</file>
+    <file>import-svgrepo-com 14.22.36.svg</file>
+    <file>import.ico</file>
+    <file>presentation.svg</file>
+    <file>process-svgrepo-com 14.22.36.svg</file>
+    <file>reset.ico</file>
+    <file>save.ico</file>
+    <file>search-13-48.ico</file>
+    <file>search.ico</file>
+    <file>select.ico</file>
+    <file>signal-alt-3-svgrepo-com 14.22.36.svg</file>
+    <file>table.svg</file>
+    <file>update.ico</file>
+  </qresource>
+</RCC>
