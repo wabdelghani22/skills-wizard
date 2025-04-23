@@ -1,0 +1,144 @@
+/* Boutons */
+QPushButton {
+    background-color: #f4f4f4;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #e8e8e8;
+}
+#stackedWidget #btn_importer_cartographie_competences_emplois:hover {
+    background-color: red;
+}
+
+QPushButton:pressed {
+    background-color: #dcdcdc;
+}
+
+/* Champs texte */
+QLineEdit, QTextEdit, QSpinBox, QComboBox {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #ccc;
+    padding: 4px;
+    border-radius: 3px;
+}
+
+QLineEdit:focus, QTextEdit:focus, QComboBox:focus {
+    border: 1px solid #999;
+}
+
+/* Tableaux */
+QTableWidget {
+    background-color: white;
+    gridline-color: #ddd;
+    font-size: 13px;
+    color: #000;
+}
+
+QHeaderView::section {
+    background-color: #f4f4f4;
+    font-weight: bold;
+    padding: 5px;
+    border: 1px solid #dcdcdc;
+}
+
+
+
+QComboBox {
+    background-color: #f9f9f9; /* Fond gris clair */
+    color: black; /* Couleur du texte */
+    padding: 2px; /* Espacement intérieur */
+    border: 1px outset #ccc; /* Bordure grise */
+}
+
+QComboBox:focus {
+    background-color: #ffffff; /* Fond blanc */
+}
+
+QComboBox QAbstractItemView {
+    background-color: #ffffff; /* Fond blanc pour la liste déroulante */
+    color: black; /* Couleur du texte */
+    selection-background-color: #0078D7; /* Fond bleu pour l'élément sélectionné */
+    selection-color: black; /* Texte noir pour l'élément sélectionné */
+}
+
+QLineEdit, QTextEdit {
+    padding: 2px;
+    background-color: #f9f9f9;
+}
+
+QLineEdit:focus, QDateEdit:focus, QTextEdit:focus {
+    background-color: #ffffff;
+}
+
+QDateEdit {
+    padding: 0px;
+    background-color: #f9f9f9;
+}
+
+QHeaderView::section {
+    background-color: #f4f4f4;  /* Couleur de fond sobre */
+    color: #333333;  /* Couleur du texte */
+    padding: 5px;  /* Espacement interne */
+    border: 1px solid #dcdcdc;  /* Bordure fine */
+    font-weight: bold;  /* Texte en gras */
+    text-align: center;  /* Texte centré */
+}
+
+QHeaderView::section:hover {
+    background-color: #e0e0e0;  /* Couleur de fond au survol */
+}
+
+
+/* Styles de base pour l'arbre */
+QTreeView {
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    background: white;
+    padding: 2px;
+}
+
+/* Style pour les éléments de premier niveau (famille métier) */
+QTreeView::item {
+    padding: 6px;
+    border-radius: 2px;
+}
+
+
+
+/* Personnalisation des branches dans l'arbre */
+QTreeView::branch {
+    background-color: transparent;
+}
+
+QTreeView::branch:has-children:closed {
+    image: url(:/icon/expand_more.ico);
+}
+
+QTreeView::branch:has-children:open {
+    image: url(:/icon/expand_more.ico);
+}
+
+QTreeView::branch:has-children:!has-siblings:closed,
+QTreeView::branch:closed:has-children:has-siblings {
+    border-image: none;
+    image: url(:/icon/expand_more.ico); /* depuis Qt resource system */
+}
+
+QTreeView::branch:open:has-children:!has-siblings,
+QTreeView::branch:open:has-children:has-siblings {
+    border-image: none;
+    image: url(:/icon/expand_more.ico);
+}
+
+
+/* Indentation pour les différents niveaux */
+QTreeView::indentation {
+    width: 20px;  /* Ajustez selon vos préférences */
+}
+

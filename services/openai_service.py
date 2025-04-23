@@ -1,12 +1,25 @@
 import openai
 import os
+import sys
 import json
 from typing import List
 from dotenv import load_dotenv
 
-load_dotenv()  # Charge les variables depuis le fichier .env
+#load_dotenv()  # Charge les variables depuis le fichier .env
 
-openai.api_key = os.getenv("OPENAI_API_KEY")
+#openai.api_key = os.getenv("OPENAI_API_KEY")
+def get_key_path():
+    if getattr(sys, 'frozen', False):
+        # Application empaquetée avec PyInstaller
+        base_path = sys._MEIPASS
+    else:
+        # Exécution normale
+        base_path = os.path.abspath(".")
+
+    return os.path.join(base_path, "openai.key")
+
+with open(get_key_path(), "r") as f:
+    openai.api_key = f.read().strip()
 
 class OpenAIService:
     def __init__(self, model="gpt-4o", temperature=0.7):

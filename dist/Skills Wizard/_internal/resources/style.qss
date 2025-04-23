@@ -1,0 +1,197 @@
+/*= Style for mainwindow START */
+#MainWindow {
+    background-color: #fff;
+}
+/*= END */
+
+/*= Style for button to change menu style START */
+#change_btn {
+    padding: 5px;
+    border: none;
+    width: 30px;
+    height: 30px;
+}
+/*= END */
+
+/*= Style for header widget START */
+#widget {
+    background-color: #f9fafd;
+}
+/*= END */
+
+/*= Style for menu with icon only START */
+/* style for widget */
+#icon_only_widget {
+    background-color: #313a46;
+    width: 50px;
+}
+
+/* style for QPushButton and QLabel */
+#icon_only_widget QPushButton,
+#icon_only_widget QLabel {
+    height: 50px;
+    border: none;
+}
+
+/* hover effect */
+#icon_only_widget QPushButton:hover {
+    background-color: rgba(86, 101, 115, 0.5);
+}
+
+/* style for logo image */
+#logo_label_1 {
+    padding: 5px;
+}
+/*= END */
+
+/*= Style for menu with icon and text START */
+#full_menu_widget {
+    background-color: #313a46;
+}
+
+#full_menu_widget QPushButton {
+    border: none;
+    border-radius: 3px;
+    text-align: left;
+    padding: 8px 0 8px 15px;
+    color: #788596;
+    background-color: #313a46;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#full_menu_widget QPushButton:hover {
+    background-color: rgba(86, 101, 115, 0.5);
+}
+
+#full_menu_widget QPushButton:checked {
+    color: #fff;
+}
+
+#logo_label_2 {
+    padding: 5px;
+    color: #fff;
+}
+
+#logo_label_3 {
+    padding-right: 10px;
+    color: #fff;
+}
+/*= END */
+
+/*= Style for search button START */
+#search_btn {
+    border: none;
+}
+/*= END */
+
+/*= Style for search input START */
+#search_input {
+    border: none;
+    padding: 5px 10px;
+}
+
+#search_input:focus {
+    background-color: #70B9FE;
+}
+/*= END */
+
+/*= Style for user information button START */
+#user_btn {
+    border: none;
+}
+/*= END */
+#label_app_logo {
+    background-color: #313a46;
+    color: white;
+}
+#frame_14,#frame_30,#frame_31,#frame_29,#frame_23,#frame_56,#frame_39,#frame_36, #frame_21, #frame_15,#frame_72,#frame_32,#frame_3,#frame_2,#frame_4, #frame_19, #frame_24, #frame_18, #frame_37, #frame_28, #frame_22 {
+    background-color: white;
+}
+#frame_40, #frame_79, #frame_50, #frame_58 {
+    background-color: #e8e8e8;
+}
+QComboBox {
+    background-color: #f9f9f9; /* Fond gris clair */
+    color: black; /* Couleur du texte */
+    padding: 2px; /* Espacement intérieur */
+    border: 1px outset #ccc; /* Bordure grise */
+}
+QComboBox:focus {
+    background-color: #ffffff; /* Fond blanc */
+}
+QComboBox QAbstractItemView {
+    background-color: #ffffff; /* Fond blanc pour la liste déroulante */
+    color: black; /* Couleur du texte */
+    selection-background-color: #0078D7; /* Fond bleu pour l'élément sélectionné */
+    selection-color: black; /* Texte blanc pour l'élément sélectionné */
+}
+
+QLineEdit, QTextEdit,QSpinBox {
+    padding: 4px;
+    background-color: #f9f9f9;
+}
+QLineEdit:focus, QDateEdit:focus, QTextEdit:focus {
+    background-color: #ffffff;
+}
+
+
+QHeaderView::section {
+    background-color: #f4f4f4;  /* Couleur de fond sobre */
+    color: #333333;  /* Couleur du texte */
+    padding: 5px;  /* Espacement interne */
+    border: 1px solid #dcdcdc;  /* Bordure fine */
+    font-weight: bold;  /* Texte en gras */
+    text-align: center;  /* Texte centré */
+}
+QHeaderView::section:hover {
+    background-color: #e0e0e0;  /* Couleur de fond au survol */
+}
+ 
+
+QPushButton {
+    padding: 12px 12px;
+}
+QPushButton:hover {
+    background-color: rgba(0, 120, 215, 0.1);
+}
+QPushButton:pressed {
+    background-color: rgba(0, 120, 215, 0.2);
+}
+/* Scrollbars discrets */
+QScrollBar:vertical, QScrollBar:horizontal {
+    background: #f1f1f1;
+    width: 8px;
+    margin: 0px;
+}
+QScrollBar::handle {
+    background: #b0b0b0;
+    border-radius: 4px;
+}
+QScrollBar::handle:hover {
+    background: #888;
+}
+
+QTreeView::item:hover {
+    background-color: #f1f5fe;
+}
+
+/* Style pour les éléments de premier niveau (famille métier) */
+QTreeView::item {
+    padding: 4px;
+    border-radius: 2px;
+}
+
+QTreeView::item:selected {
+    background-color: #e6f0ff;
+    color: black; /* Garde le texte visible quand sélectionné */
+}
+
+.frame-bordered-white {
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    background-color: #ffffff;
+}
+
+
+

@@ -31,7 +31,6 @@ from controllers.openai_controller import OpenAIController
 from controllers.fichePoste_controller import FichePosteController
 from controllers.FinaliteEmploiController import FinaliteEmploiController
 from PyQt5.QtWidgets import QInputDialog
-from db import crud
 from ui.dialogs.dialog_parametres_emploi import DialogParametresEmploi
 from PyQt5.QtWidgets import QTreeWidgetItem
 from PyQt5 import QtCore
@@ -44,8 +43,17 @@ from docx import Document
 from PyQt5.QtWidgets import QFileDialog
 import pandas as pd
 from PyQt5.QtWidgets import QFileDialog, QMessageBox, QTableWidgetItem
+import sys
+import os
 
 
+
+def resource_path(relative_path):
+    try:
+        base_path = sys._MEIPASS  # PyInstaller
+    except AttributeError:
+        base_path = os.path.abspath(".")
+    return os.path.join(base_path, relative_path)
 
 
 
@@ -60,10 +68,13 @@ class MainApp(QMainWindow):
         self.ui.setupUi(self)
         
         # Charger et appliquer le style
-        with open("resources/styles/style.qss", "r") as file:
+        #with open("resources/styles/style.qss", "r") as file:
+         #   style = file.read()
+         #   app.setStyleSheet(style)
+        style_path = resource_path("resources/styles/style.qss")
+        with open(style_path, "r") as file:
             style = file.read()
             app.setStyleSheet(style)
-        
         # Contrôleurs
         # 🔸 Pas de projet actif au démarrage
         self.customize_layouts()
@@ -181,7 +192,7 @@ class MainApp(QMainWindow):
         self.setWindowTitle("Application Gestion des Compétences")
         self.setMinimumSize(1000, 700)
         self.show()
-
+    
     def on_selection_change(self):
         has_selection = bool(self.ui.table_competences.selectedItems())
         self.ui.btn_sauvegarder_liste_competence.setEnabled(has_selection)
