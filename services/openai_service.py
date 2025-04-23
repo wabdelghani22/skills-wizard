@@ -2,9 +2,11 @@ import openai
 import os
 import json
 from typing import List
+from dotenv import load_dotenv
 
-# Clé API stockée en variable d'environnement
-openai.api_key = os.getenv("OPENAI_API_KEY", "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")
+load_dotenv()  # Charge les variables depuis le fichier .env
+
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 class OpenAIService:
     def __init__(self, model="gpt-4o", temperature=0.7):
