@@ -1,7 +1,28 @@
 import sqlite3
 import os
 
-DB_PATH = os.path.join(os.path.dirname(__file__), "competence_app.db")
+#DB_PATH = os.path.join(os.path.dirname(__file__), "competence_app.db")
+import sys
+
+import sys
+
+def get_db_path():
+    """
+    Renvoie le chemin vers la base de données dans %APPDATA%\competences_app\competence_app.db
+    Créé le dossier s'il n'existe pas.
+    """
+    if sys.platform.startswith("win"):
+        base_dir = os.environ.get("APPDATA", os.path.expanduser("~"))
+    else:
+        # fallback pour d'autres OS
+        base_dir = os.path.expanduser("~")
+
+    db_folder = os.path.join(base_dir, "competences_app")
+    os.makedirs(db_folder, exist_ok=True)
+
+    return os.path.join(db_folder, "competence_app.db")
+
+DB_PATH = get_db_path()
 
 def get_connection():
     conn = sqlite3.connect(DB_PATH)
